@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebDeveloper.Model.Autores>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.au_apellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.au_nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.au_telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.au_ciudad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.au_salario)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.au_apellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.au_nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.au_telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.au_ciudad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.au_salario)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.au_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.au_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.au_id })
+        </td>
+    </tr>
+}
+
+</table>

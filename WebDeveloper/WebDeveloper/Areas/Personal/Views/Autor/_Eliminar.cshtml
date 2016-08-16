@@ -1,0 +1,58 @@
+﻿@model WebDeveloper.Model.Autores
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Autores</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.au_apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.au_apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.au_nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.au_nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.au_telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.au_telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.au_ciudad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.au_ciudad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.au_salario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.au_salario)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
